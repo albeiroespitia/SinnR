@@ -1,12 +1,13 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native'
+import { View, Text, Button, StyleSheet,ScrollView } from 'react-native'
+import CardComponent from '../../Card'
 
 
 export default class Home extends React.Component{
     static navigationOptions = {
         title: 'SpensionR',
         headerStyle: {
-            backgroundColor: '#15b7b9',
+            backgroundColor: '#222831',
         },
         headerTitleStyle: {
             textAlign:'center',
@@ -22,7 +23,10 @@ export default class Home extends React.Component{
     render(){
         return(
             <View style={styles.container}>
-                <Text> Hola </Text>
+				<ScrollView>
+                	<CardComponent />
+					<CardComponent />
+				</ScrollView>
             </View>
         )
     }
@@ -30,7 +34,7 @@ export default class Home extends React.Component{
 
 const styles = StyleSheet.create({
     container:{
-        backgroundColor: '#fff',
+        backgroundColor: '#393e46',
         height: '100%',
     }
 })
